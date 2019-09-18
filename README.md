@@ -1,6 +1,11 @@
 # Classification with Transformers
 Modified the code from [here](https://github.com/huggingface/pytorch-transformers/blob/master/examples/run_glue.py) with the goal of making it more modular and easier to understand.
 
+## Requirements
+Create conda env:
+
+conda env create -f requirements.yml
+
 ## Settings
 Edit config.py. Need to particularly fill the upper (required) group of inputs (e.g., data directory).
 
