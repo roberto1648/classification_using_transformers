@@ -77,14 +77,14 @@ def main():
         )
 
     if args.do_train:
-        train(model, tokenizer, device, output_mode, n_gpu, label_list)
+        train(model, tokenizer, device, output_mode, n_gpu, args.label_list)
 
     model, tokenizer = save_reload_model_and_tokenizer(
         model, tokenizer, model_class, tokenizer_class, device,
     )
 
     if args.do_eval and args.local_rank in [-1, 0]:
-        evaluate(tokenizer, model_class, device, output_mode, n_gpu, label_list)
+        evaluate(tokenizer, model_class, device, output_mode, n_gpu, args.label_list)
 
 
 # def get_args_object():

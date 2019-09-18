@@ -24,8 +24,8 @@ def train(
         device,
         output_mode,
         n_gpu,
-        label_list,
         # inputs loaded by default from config.py:
+        label_list=args.label_list,
         num_train_epochs=args.num_train_epochs,
         output_dir=args.output_dir,
         model_type=args.model_type,
